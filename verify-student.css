@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.wrapper {
+    width: 350px;
+    border: 1px solid grey;
+    padding: 20px;
+}
+
+.signin {
+    display: block;
+}
+
+.signup {
+    display: none;
+}
+
+.signin,
+.signup {
+    width: 350px;
+    border: 2px solid darkcyan;
+    padding: 0 70px 40px 70px;
+    margin-top: 6px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: orangered;
+}
+
+.section {
+    margin: 24px 0;
+}
+
+label {
+    font-style: italic;
+    color: darkcyan;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+
+input::placeholder {
+    color: initial;
+    font-size: initial;
+}
+
+input:focus {
+    outline: 2px solid darkcyan;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    margin: 2px;
+    flex: 1;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 4px;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: orangered;
+}
