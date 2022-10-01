@@ -5,11 +5,6 @@ const create = document.querySelector('#create');
 const verifyMe = document.querySelector('#verifyMe');
 
 verify.addEventListener('click', () => {
-    // List data of Students
-    const nameLibrary = ["Error-Code"];
-    const ageLibrary = ["18"];
-    const levelLibrary = ["300"];
-
     // Select all paragraphs field
     const paraName = document.querySelector('.name');
     const paraAge = document.querySelector('.age');
@@ -38,6 +33,50 @@ verify.addEventListener('click', () => {
         paraName.textContent = '';
         paraAge.textContent = '';
         paraLevel.textContent = '';
+        checkLength();
+    }
+    
+    function checkLength() {
+        nameValueLength = nameValue.length;
+        ageValueLength = String(ageValue).length;
+        levelValueLength = String(levelValue).length;
+        let check1 = false;
+        let check2 = false;
+        let check3 = false;
+        nameCheck();
+        ageCheck();
+        levelCheck();
+
+        if (check1 === true && check2 === true && check3 === true) {
+            console.log('true');
+            checkRecords();
+        }
+
+        function nameCheck() {
+            if (nameValueLength < 3) {
+                paraName.textContent = 'Username should not be less than "3" characters!';
+            } else if (nameValueLength > 12) {
+                paraName.textContent = 'Username should not be more than "12" characters'
+            } else {
+                check1 = true;
+            }
+        }
+
+        function ageCheck() {
+            if (ageValueLength !== 2) {
+                    paraAge.textContent = 'Age should not be more or less than 2 characters';
+            } else {
+                check2 = true;
+            }
+        }
+
+        function levelCheck() {
+            if (levelValueLength !== 3) {
+                paraLevel.textContent = 'Level should not be more or less than 3 characters';
+            } else {
+                check3 = true;
+            }
+        }
     }
     
     function errorAlert() {
@@ -51,7 +90,6 @@ verify.addEventListener('click', () => {
 
         if (isNaN(ageValue)) {
             paraAge.textContent = 'age should contain numbers only!';
-            console.log(ageValue);
         } else if (ageValue === null || ageValue === undefined) {
             paraAge.textContent = 'please fill in your age!';
         } else {
