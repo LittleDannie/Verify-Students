@@ -128,8 +128,18 @@ verify.addEventListener('click', () => {
         function ageRangeCheck() {
             if (ageRange < 16) {
                 paraAge.textContent = 'You must be up to 16 years to be a student';
+                document.querySelector('#displayMessage').style.border = "none";
+                document.querySelector('#displayMessage').style.padding = "0";
+                document.querySelector('#displayMessage').style.marginTop = "0";
+                document.querySelector('#displayMessage').style.marginBottom = "0";
+                displayMessage.textContent = '';
             } else if (ageRange > 90) {
                 paraAge.textContent  = 'Sorry! you are too old to be a student';
+                document.querySelector('#displayMessage').style.border = "none";
+                document.querySelector('#displayMessage').style.padding = "0";
+                document.querySelector('#displayMessage').style.marginTop = "0";
+                document.querySelector('#displayMessage').style.marginBottom = "0";
+                displayMessage.textContent = '';
             } else {
                 return rangeCheck = true;
             }
@@ -137,9 +147,19 @@ verify.addEventListener('click', () => {
 
         function levelDigitCheck() {
             if (Number(digitTwo) !== 0) {
-                paraLevel.textContent = 'Second digit must be "0"!'
+                paraLevel.textContent = 'Second digit must be "0"!';
+                document.querySelector('#displayMessage').style.border = "none";
+                document.querySelector('#displayMessage').style.padding = "0";
+                document.querySelector('#displayMessage').style.marginTop = "0";
+                document.querySelector('#displayMessage').style.marginBottom = "0";
+                displayMessage.textContent = '';
             } else if (Number(digitThree) !== 0) {
                 paraLevel.textContent = 'Third digit must be "0"!';
+                document.querySelector('#displayMessage').style.border = "none";
+                document.querySelector('#displayMessage').style.padding = "0";
+                document.querySelector('#displayMessage').style.marginTop = "0";
+                document.querySelector('#displayMessage').style.marginBottom = "0";
+                displayMessage.textContent = '';
             } else {
                 return digitsCheck = true;
             }
@@ -383,8 +403,18 @@ create.addEventListener('click', () => {
         function ageRangeCheck2() {
             if (ageRange2 < 16) {
                 paraAge2.textContent = 'You must be up to 16 years to be a student';
+                document.querySelector('#displayMessage2').style.border = "none";
+                document.querySelector('#displayMessage2').style.padding = "0";
+                document.querySelector('#displayMessage2').style.marginTop = "0";
+                document.querySelector('#displayMessage2').style.marginBottom = "";
+                displayMessage2.textContent = '';
             } else if (ageRange2 > 90) {
                 paraAge2.textContent  = 'Sorry! you are too old to be a student';
+                document.querySelector('#displayMessage2').style.border = "none";
+                document.querySelector('#displayMessage2').style.padding = "0";
+                document.querySelector('#displayMessage2').style.marginTop = "0";
+                document.querySelector('#displayMessage2').style.marginBottom = "";
+                displayMessage2.textContent = '';
             } else {
                 return rangeCheck2 = true;
             }
@@ -392,9 +422,19 @@ create.addEventListener('click', () => {
 
         function levelDigitCheck2() {
             if (Number(digitTwo2) !== 0) {
-                paraLevel2.textContent = 'Second digit must be "0"!'
+                paraLevel2.textContent = 'Second digit must be "0"!';
+                document.querySelector('#displayMessage2').style.border = "none";
+                document.querySelector('#displayMessage2').style.padding = "0";
+                document.querySelector('#displayMessage2').style.marginTop = "0";
+                document.querySelector('#displayMessage2').style.marginBottom = "";
+                displayMessage2.textContent = '';
             } else if (Number(digitThree2) !== 0) {
-                paraLevel2.textContent = 'Third digit must be "0"';
+                paraLevel2.textContent = 'Third digit must be "0"!';
+                document.querySelector('#displayMessage2').style.border = "none";
+                document.querySelector('#displayMessage2').style.padding = "0";
+                document.querySelector('#displayMessage2').style.marginTop = "0";
+                document.querySelector('#displayMessage2').style.marginBottom = "";
+                displayMessage2.textContent = '';
             } else {
                 return digitsCheck2 = true;
             }
@@ -406,7 +446,7 @@ create.addEventListener('click', () => {
         const spaceCheck = nameValue2[0];
 
         if(spaceCheck === ' ') {
-            paraName2.textContent = 'Username must not begin with "space"'
+            paraName2.textContent = 'Username must not begin with "space"';
         } else {
             storeRecord();
         }
