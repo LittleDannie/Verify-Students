@@ -91,9 +91,21 @@ verify.addEventListener('click', () => {
 
     // Check nameLibrary, ageLibrary and levelLibrary if info provided matches
     function checkRecords() {
-            const nameIndex = nameLibrary.indexOf(String(nameValue));
-            if (nameIndex >= 0) {
-                checkAgeWithIndex();
+        const nameIndex = nameLibrary.indexOf(String(nameValue));
+        if (nameIndex >= 0) {
+            checkAgeWithIndex();
+        } else {
+            document.querySelector('#displayMessage').style.border = "2px solid red";
+            document.querySelector('#displayMessage').style.color = "red";
+            document.querySelector('#displayMessage').style.padding = "10px";
+            document.querySelector('#displayMessage').style.marginTop = "20px";
+            document.querySelector('#displayMessage').style.marginBottom = "-10px";
+            displayMessage.textContent = 'No record found! Please create a student account!';
+        }
+
+        function checkAgeWithIndex() {
+            if (Number(ageLibrary[nameIndex]) === Number(ageValue)) {
+                checkLevelWithIndex();
             } else {
                 document.querySelector('#displayMessage').style.border = "2px solid red";
                 document.querySelector('#displayMessage').style.color = "red";
@@ -102,37 +114,25 @@ verify.addEventListener('click', () => {
                 document.querySelector('#displayMessage').style.marginBottom = "-10px";
                 displayMessage.textContent = 'No record found! Please create a student account!';
             }
+        }
 
-            function checkAgeWithIndex() {
-                if (Number(ageLibrary[nameIndex]) === Number(ageValue)) {
-                    checkLevelWithIndex();
-                } else {
-                    document.querySelector('#displayMessage').style.border = "2px solid red";
-                    document.querySelector('#displayMessage').style.color = "red";
-                    document.querySelector('#displayMessage').style.padding = "10px";
-                    document.querySelector('#displayMessage').style.marginTop = "20px";
-                    document.querySelector('#displayMessage').style.marginBottom = "-10px";
-                    displayMessage.textContent = 'No record found! Please create a student account!';
-                }
+        function checkLevelWithIndex() {
+            if (Number(levelLibrary[nameIndex]) === Number(levelValue)) {
+                document.querySelector('#displayMessage').style.border = "2px solid lime";
+                document.querySelector('#displayMessage').style.color = "lime";
+                document.querySelector('#displayMessage').style.padding = "10px";
+                document.querySelector('#displayMessage').style.marginTop = "20px";
+                document.querySelector('#displayMessage').style.marginBottom = "-10px";
+                displayMessage.textContent = 'You are a Student. Congrats!!!';
+            } else {
+                document.querySelector('#displayMessage').style.border = "2px solid red";
+                document.querySelector('#displayMessage').style.color = "red";
+                document.querySelector('#displayMessage').style.padding = "10px";
+                document.querySelector('#displayMessage').style.marginTop = "20px";
+                document.querySelector('#displayMessage').style.marginBottom = "-10px";
+                displayMessage.textContent = 'No record found! Please create a student account!';
             }
-
-            function checkLevelWithIndex() {
-                if (Number(levelLibrary[nameIndex]) === Number(levelValue)) {
-                    document.querySelector('#displayMessage').style.border = "2px solid lime";
-                    document.querySelector('#displayMessage').style.color = "lime";
-                    document.querySelector('#displayMessage').style.padding = "10px";
-                    document.querySelector('#displayMessage').style.marginTop = "20px";
-                    document.querySelector('#displayMessage').style.marginBottom = "-10px";
-                    displayMessage.textContent = 'You are a Student. Congrats!!!';
-                } else {
-                    document.querySelector('#displayMessage').style.border = "2px solid red";
-                    document.querySelector('#displayMessage').style.color = "red";
-                    document.querySelector('#displayMessage').style.padding = "10px";
-                    document.querySelector('#displayMessage').style.marginTop = "20px";
-                    document.querySelector('#displayMessage').style.marginBottom = "-10px";
-                    displayMessage.textContent = 'No record found! Please create a student account!';
-                }
-            }
+        }
     }
     
     // Validates characters and outputs error message
