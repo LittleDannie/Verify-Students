@@ -4,8 +4,9 @@ const createStudent = document.querySelector('#createStudent');
 const create = document.querySelector('#create');
 const verifyMe = document.querySelector('#verifyMe');
 
-
+// Select displayMessage tag
 const displayMessage = document.querySelector('#displayMessage');
+const displayMessage2 = document.querySelector('#displayMessage2');
 
 // Data of Students
 const nameLibrary = ["Error-Code"];
