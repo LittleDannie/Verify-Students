@@ -342,6 +342,13 @@ create.addEventListener('click', () => {
             document.querySelector('#displayMessage2').style.marginTop = "20px";
             document.querySelector('#displayMessage2').style.marginBottom = "-10px";
             displayMessage2.textContent = 'Error!!! Record already exists, please verify if you are a student';
+        } else if (matchName >= 0) {
+            paraName2.textContent = 'Username already exists!';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "";
+            displayMessage2.textContent = '';
         } else {
             nameLibrary.push(String(nameValue2));
             ageLibrary.push(String(ageValue2));
