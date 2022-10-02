@@ -329,16 +329,30 @@ create.addEventListener('click', () => {
         }
     }
 
+    // Store record in Library arrays
     function storeRecord() {
-        nameLibrary.push(String(nameValue2));
-        ageLibrary.push(String(ageValue2));
-        levelLibrary.push(String(levelValue2));
-        document.querySelector('#displayMessage2').style.border = "2px solid lime";
-        document.querySelector('#displayMessage2').style.color = "lime";
-        document.querySelector('#displayMessage2').style.padding = "10px";
-        document.querySelector('#displayMessage2').style.marginTop = "20px";
-        document.querySelector('#displayMessage2').style.marginBottom = "-10px";
-        displayMessage2.textContent = 'Success!!! Record created and updated';
+        const matchName = nameLibrary.indexOf(String(nameValue2));
+        const matchAge = ageLibrary.indexOf(String(ageValue2));
+        const matchLevel = levelLibrary.indexOf(String(levelValue2));
+        console.log(matchName);
+        if ((matchName >= 0) && (matchAge >= 0) && (matchLevel >= 0)) {
+            document.querySelector('#displayMessage2').style.border = "2px solid red";
+            document.querySelector('#displayMessage2').style.color = "red";
+            document.querySelector('#displayMessage2').style.padding = "10px";
+            document.querySelector('#displayMessage2').style.marginTop = "20px";
+            document.querySelector('#displayMessage2').style.marginBottom = "-10px";
+            displayMessage2.textContent = 'Error!!! Record already exists, please verify if you are a student';
+        } else {
+            nameLibrary.push(String(nameValue2));
+            ageLibrary.push(String(ageValue2));
+            levelLibrary.push(String(levelValue2));
+            document.querySelector('#displayMessage2').style.border = "2px solid lime";
+            document.querySelector('#displayMessage2').style.color = "lime";
+            document.querySelector('#displayMessage2').style.padding = "10px";
+            document.querySelector('#displayMessage2').style.marginTop = "20px";
+            document.querySelector('#displayMessage2').style.marginBottom = "-10px";
+            displayMessage2.textContent = 'Success!!! Record created and updated';
+        }
     }
 
      // Validates characters and outputs error message
