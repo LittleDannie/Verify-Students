@@ -60,7 +60,7 @@ verify.addEventListener('click', () => {
         levelCheck();
 
         if (check1 === true && check2 === true && check3 === true) {
-            checkRecords();
+            checkRangeAndDigits();
         }
 
         function nameCheck() {
@@ -106,6 +106,42 @@ verify.addEventListener('click', () => {
                 displayMessage.textContent = '';
             } else {
                 check3 = true;
+            }
+        }
+    }
+
+    // Check age range and level digits
+    function checkRangeAndDigits() {
+        const ageRange = Number(ageValue);
+        const levelDigits = String(levelValue);
+        const digitTwo = levelDigits[1];
+        const digitThree = levelDigits[2];
+        let rangeCheck = false;
+        let digitsCheck = false;
+        ageRangeCheck();
+        levelDigitCheck();
+
+        if (rangeCheck && digitsCheck) {
+            checkRecords();
+        }
+
+        function ageRangeCheck() {
+            if (ageRange < 16) {
+                paraAge.textContent = 'You must be up to 16 years to be a student';
+            } else if (ageRange > 90) {
+                paraAge.textContent  = 'Sorry! you are too old to be a student';
+            } else {
+                return rangeCheck = true;
+            }
+        }
+
+        function levelDigitCheck() {
+            if (Number(digitTwo) !== 0) {
+                paraLevel.textContent = 'Second digit must be "0"!'
+            } else if (Number(digitThree) !== 0) {
+                paraLevel.textContent = 'Third digit must be "0"';
+            } else {
+                return digitsCheck = true;
             }
         }
     }
@@ -279,7 +315,7 @@ create.addEventListener('click', () => {
         levelCheck2();
 
         if (check12 === true && check22 === true && check32 === true) {
-            storeRecord();
+            checkRangeAndDigits2();
         }
 
         function nameCheck2() {
@@ -325,6 +361,42 @@ create.addEventListener('click', () => {
                 displayMessage2.textContent = '';
             } else {
                 check32 = true;
+            }
+        }
+    }
+
+    // Check age range and level digits
+    function checkRangeAndDigits2() {
+        const ageRange2 = Number(ageValue2);
+        const levelDigits2 = String(levelValue2);
+        const digitTwo2 = levelDigits2[1];
+        const digitThree2 = levelDigits2[2];
+        let rangeCheck2 = false;
+        let digitsCheck2 = false;
+        ageRangeCheck2();
+        levelDigitCheck2();
+
+        if (rangeCheck2 && digitsCheck2) {
+            storeRecord();
+        }
+
+        function ageRangeCheck2() {
+            if (ageRange2 < 16) {
+                paraAge2.textContent = 'You must be up to 16 years to be a student';
+            } else if (ageRange2 > 90) {
+                paraAge2.textContent  = 'Sorry! you are too old to be a student';
+            } else {
+                return rangeCheck2 = true;
+            }
+        }
+
+        function levelDigitCheck2() {
+            if (Number(digitTwo2) !== 0) {
+                paraLevel2.textContent = 'Second digit must be "0"!'
+            } else if (Number(digitThree2) !== 0) {
+                paraLevel2.textContent = 'Third digit must be "0"';
+            } else {
+                return digitsCheck2 = true;
             }
         }
     }
