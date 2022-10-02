@@ -95,3 +95,9 @@ p {
     margin: 0;
     padding: 0;
 }
+
+#displayMessage,
+#displayMessage {
+    color: lime;
+    font-size: 14px;
+}
