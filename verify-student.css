@@ -16,12 +16,6 @@ body {
     flex: 1;
 }
 
-.wrapper {
-    width: 350px;
-    border: 1px solid grey;
-    padding: 20px;
-}
-
 .signin {
     display: block;
 }
@@ -93,4 +87,11 @@ button {
 button:hover {
     background-color: white;
     color: orangered;
+}
+
+p {
+    color: red;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
 }
