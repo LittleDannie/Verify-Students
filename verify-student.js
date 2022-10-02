@@ -139,7 +139,7 @@ verify.addEventListener('click', () => {
             if (Number(digitTwo) !== 0) {
                 paraLevel.textContent = 'Second digit must be "0"!'
             } else if (Number(digitThree) !== 0) {
-                paraLevel.textContent = 'Third digit must be "0"';
+                paraLevel.textContent = 'Third digit must be "0"!';
             } else {
                 return digitsCheck = true;
             }
@@ -377,7 +377,7 @@ create.addEventListener('click', () => {
         levelDigitCheck2();
 
         if (rangeCheck2 && digitsCheck2) {
-            storeRecord();
+            checkForSpace();
         }
 
         function ageRangeCheck2() {
@@ -401,13 +401,26 @@ create.addEventListener('click', () => {
         }
     }
 
+    // Check for space in Username input
+    function checkForSpace() {
+        const spaceCheck = nameValue2[0];
+
+        if(spaceCheck === ' ') {
+            paraName2.textContent = 'Username must not begin with "space"'
+        } else {
+            storeRecord();
+        }
+    }
+
     // Store record in Library arrays
     function storeRecord() {
         const matchName = nameLibrary.indexOf(String(nameValue2));
-        const matchAge = ageLibrary.indexOf(String(ageValue2));
-        const matchLevel = levelLibrary.indexOf(String(levelValue2));
-        console.log(matchName);
-        if ((matchName >= 0) && (matchAge >= 0) && (matchLevel >= 0)) {
+        const matchAge = ageLibrary[matchName];
+        const matchLevel = levelLibrary[matchName];
+        // const matchAgeIndex = ageLibrary.indexOf(String(matchAge));
+        // const matchLevelIndex = levelLibrary.indexOf(String(matchLevel));
+        console.log(String(levelValue2));
+        if ((matchName >= 0) && (matchAge === String(ageValue2)) && (matchLevel === String(levelValue2))) {
             document.querySelector('#displayMessage2').style.border = "2px solid red";
             document.querySelector('#displayMessage2').style.color = "red";
             document.querySelector('#displayMessage2').style.padding = "10px";
