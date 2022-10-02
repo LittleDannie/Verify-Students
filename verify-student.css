@@ -102,3 +102,21 @@ p {
     font-style: italic;
     font-weight: 600;
 }
+footer {
+    display: flex;
+    gap: 14px;
+}
+
+.date-time {
+    color: green;
+}
+
+.copyright {
+    color: blue;
+    font-style: italic;
+    font-weight: 400;
+}
+
+a {
+    color: red;
+}
