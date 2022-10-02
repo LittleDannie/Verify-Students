@@ -4,6 +4,11 @@ const createStudent = document.querySelector('#createStudent');
 const create = document.querySelector('#create');
 const verifyMe = document.querySelector('#verifyMe');
 
+// Data of Students
+const nameLibrary = ["Error-Code"];
+const ageLibrary = ["18"];
+const levelLibrary = ["300"];
+
 verify.addEventListener('click', () => {
     // Select all paragraphs field
     const paraName = document.querySelector('.name');
@@ -48,7 +53,6 @@ verify.addEventListener('click', () => {
         levelCheck();
 
         if (check1 === true && check2 === true && check3 === true) {
-            console.log('true');
             checkRecords();
         }
 
@@ -78,7 +82,34 @@ verify.addEventListener('click', () => {
             }
         }
     }
+
+    // Check nameLibrary, ageLibrary and levelLibrary if info provided matches
+    function checkRecords() {
+            const nameIndex = nameLibrary.indexOf(String(nameValue));
+            if (nameIndex >= 0) {
+                checkAgeWithIndex();
+            } else {
+                alert('No record found! Please create a student account!');
+            }
+
+            function checkAgeWithIndex() {
+                if (Number(ageLibrary[nameIndex]) === Number(ageValue)) {
+                    checkLevelWithIndex();
+                } else {
+                    alert('No record found! Please create a student account!');
+                }
+            }
+
+            function checkLevelWithIndex() {
+                if (Number(levelLibrary[nameIndex]) === Number(levelValue)) {
+                    alert('You are a Student. Congrats!!!');
+                } else {
+                    alert('No record found! Please create a student account!');
+                }
+            }
+    }
     
+    // Validates characters and outputs error message
     function errorAlert() {
         if (nameValue === "" || nameValue === undefined || nameValue === null) {
             paraName.textContent = 'Please fill in your username!';
@@ -106,10 +137,11 @@ verify.addEventListener('click', () => {
     }
 })
 
-// createStudent.addEventListener('click', () => {
-//     document.querySelector('.signin').style.display = 'none';
-//     document.querySelector('.signup').style.display = 'block';
-// });
+createStudent.addEventListener('click', () => {
+    // Switches "become a student?" page
+    document.querySelector('.signin').style.display = 'none';
+    document.querySelector('.signup').style.display = 'block';
+});
 
 create.addEventListener('click', () => {
     // Select all text field
@@ -118,7 +150,8 @@ create.addEventListener('click', () => {
     const level = document.querySelector('#level');
 });
 
-// verifyMe.addEventListener('click', () => {
-//     document.querySelector('.signin').style.display = 'block';
-//     document.querySelector('.signup').style.display = 'none';
-// });
+verifyMe.addEventListener('click', () => {
+    // Switches to "are you a student?"" page
+    document.querySelector('.signin').style.display = 'block';
+    document.querySelector('.signup').style.display = 'none';
+});
