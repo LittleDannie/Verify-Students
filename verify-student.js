@@ -66,8 +66,18 @@ verify.addEventListener('click', () => {
         function nameCheck() {
             if (nameValueLength < 3) {
                 paraName.textContent = 'Username should not be less than "3" characters!';
+                document.querySelector('#displayMessage').style.border = "none";
+                document.querySelector('#displayMessage').style.padding = "0";
+                document.querySelector('#displayMessage').style.marginTop = "0";
+                document.querySelector('#displayMessage').style.marginBottom = "0";
+                displayMessage.textContent = '';
             } else if (nameValueLength > 12) {
-                paraName.textContent = 'Username should not be more than "12" characters'
+                paraName.textContent = 'Username should not be more than "12" characters';
+                document.querySelector('#displayMessage').style.border = "none";
+                document.querySelector('#displayMessage').style.padding = "0";
+                document.querySelector('#displayMessage').style.marginTop = "0";
+                document.querySelector('#displayMessage').style.marginBottom = "0";
+                displayMessage.textContent = '';
             } else {
                 check1 = true;
             }
@@ -76,6 +86,11 @@ verify.addEventListener('click', () => {
         function ageCheck() {
             if (ageValueLength !== 2) {
                     paraAge.textContent = 'Age should not be more or less than 2 characters';
+                    document.querySelector('#displayMessage').style.border = "none";
+                    document.querySelector('#displayMessage').style.padding = "0";
+                    document.querySelector('#displayMessage').style.marginTop = "0";
+                    document.querySelector('#displayMessage').style.marginBottom = "0";
+                    displayMessage.textContent = '';
             } else {
                 check2 = true;
             }
@@ -84,6 +99,11 @@ verify.addEventListener('click', () => {
         function levelCheck() {
             if (levelValueLength !== 3) {
                 paraLevel.textContent = 'Level should not be more or less than 3 characters';
+                document.querySelector('#displayMessage').style.border = "none";
+                document.querySelector('#displayMessage').style.padding = "0";
+                document.querySelector('#displayMessage').style.marginTop = "0";
+                document.querySelector('#displayMessage').style.marginBottom = "0";
+                displayMessage.textContent = '';
             } else {
                 check3 = true;
             }
@@ -140,26 +160,71 @@ verify.addEventListener('click', () => {
     function errorAlert() {
         if (nameValue === "" || nameValue === undefined || nameValue === null) {
             paraName.textContent = 'Please fill in your username!';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         } else if (!isNaN(nameValue)) {
             paraName.textContent = 'Username should begin with letters only!';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         } else {
             paraName.textContent = '';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         }
 
         if (isNaN(ageValue)) {
             paraAge.textContent = 'age should contain numbers only!';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         } else if (ageValue === null || ageValue === undefined) {
             paraAge.textContent = 'please fill in your age!';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         } else {
             paraAge.textContent = '';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         }
 
         if (isNaN(levelValue)) {
             paraLevel.textContent = 'level should contain numbers only!';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';displayMessage.textContent = '';
         } else if (levelValue === " " || levelValue === undefined) {
             paraLevel.textContent = 'please fill in your username!';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         } else {
             paraLevel.textContent = '';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
         }
     }
 })
@@ -220,8 +285,18 @@ create.addEventListener('click', () => {
         function nameCheck2() {
             if (nameValueLength2 < 3) {
                 paraName2.textContent = 'Username should not be less than "3" characters!';
+                document.querySelector('#displayMessage2').style.border = "none";
+                document.querySelector('#displayMessage2').style.padding = "0";
+                document.querySelector('#displayMessage2').style.marginTop = "0";
+                document.querySelector('#displayMessage2').style.marginBottom = "0";
+                displayMessage2.textContent = '';
             } else if (nameValueLength2 > 12) {
-                paraName2.textContent = 'Username should not be more than "12" characters'
+                paraName2.textContent = 'Username should not be more than "12" characters';
+                document.querySelector('#displayMessage2').style.border = "none";
+                document.querySelector('#displayMessage2').style.padding = "0";
+                document.querySelector('#displayMessage2').style.marginTop = "0";
+                document.querySelector('#displayMessage2').style.marginBottom = "0";
+                displayMessage2.textContent = '';
             } else {
                 check12 = true;
             }
@@ -230,6 +305,11 @@ create.addEventListener('click', () => {
         function ageCheck2() {
             if (ageValueLength2 !== 2) {
                     paraAge2.textContent = 'Age should not be more or less than 2 characters';
+                    document.querySelector('#displayMessage2').style.border = "none";
+                    document.querySelector('#displayMessage2').style.padding = "0";
+                    document.querySelector('#displayMessage2').style.marginTop = "0";
+                    document.querySelector('#displayMessage2').style.marginBottom = "0";
+                    displayMessage2.textContent = '';
             } else {
                 check22 = true;
             }
@@ -238,6 +318,11 @@ create.addEventListener('click', () => {
         function levelCheck2() {
             if (levelValueLength2 !== 3) {
                 paraLevel2.textContent = 'Level should not be more or less than 3 characters';
+                document.querySelector('#displayMessage2').style.border = "none";
+                document.querySelector('#displayMessage2').style.padding = "0";
+                document.querySelector('#displayMessage2').style.marginTop = "0";
+                document.querySelector('#displayMessage2').style.marginBottom = "0";
+                displayMessage2.textContent = '';
             } else {
                 check32 = true;
             }
@@ -260,26 +345,71 @@ create.addEventListener('click', () => {
      function errorAlert2() {
         if (nameValue2 === "" || nameValue2 === undefined || nameValue2 === null) {
             paraName2.textContent = 'Please fill in your username!';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         } else if (!isNaN(nameValue2)) {
             paraName2.textContent = 'Username should begin with letters only!';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         } else {
             paraName2.textContent = '';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         }
 
         if (isNaN(ageValue2)) {
             paraAge2.textContent = 'age should contain numbers only!';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         } else if (ageValue2 === null || ageValue2 === undefined) {
             paraAge2.textContent = 'please fill in your age!';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         } else {
             paraAge2.textContent = '';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         }
 
         if (isNaN(levelValue2)) {
             paraLevel2.textContent = 'level should contain numbers only!';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         } else if (levelValue2 === " " || levelValue2 === undefined) {
             paraLevel2.textContent = 'please fill in your username!';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         } else {
             paraLevel2.textContent = '';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "0";
+            displayMessage2.textContent = '';
         }
     }
 });
