@@ -100,7 +100,7 @@ verify.addEventListener('click', () => {
             document.querySelector('#displayMessage').style.padding = "10px";
             document.querySelector('#displayMessage').style.marginTop = "20px";
             document.querySelector('#displayMessage').style.marginBottom = "-10px";
-            displayMessage.textContent = 'No record found! Please create a student account!';
+            displayMessage.textContent = 'No record found! Please create a student record!';
         }
 
         function checkAgeWithIndex() {
@@ -112,7 +112,7 @@ verify.addEventListener('click', () => {
                 document.querySelector('#displayMessage').style.padding = "10px";
                 document.querySelector('#displayMessage').style.marginTop = "20px";
                 document.querySelector('#displayMessage').style.marginBottom = "-10px";
-                displayMessage.textContent = 'No record found! Please create a student account!';
+                displayMessage.textContent = 'No record found! Please create a student record!';
             }
         }
 
@@ -130,7 +130,7 @@ verify.addEventListener('click', () => {
                 document.querySelector('#displayMessage').style.padding = "10px";
                 document.querySelector('#displayMessage').style.marginTop = "20px";
                 document.querySelector('#displayMessage').style.marginBottom = "-10px";
-                displayMessage.textContent = 'No record found! Please create a student account!';
+                displayMessage.textContent = 'No record found! Please create a student record!';
             }
         }
     }
