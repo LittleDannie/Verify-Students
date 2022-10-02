@@ -4,6 +4,9 @@ const createStudent = document.querySelector('#createStudent');
 const create = document.querySelector('#create');
 const verifyMe = document.querySelector('#verifyMe');
 
+
+const displayMessage = document.querySelector('#displayMessage');
+
 // Data of Students
 const nameLibrary = ["Error-Code"];
 const ageLibrary = ["18"];
@@ -92,22 +95,42 @@ verify.addEventListener('click', () => {
             if (nameIndex >= 0) {
                 checkAgeWithIndex();
             } else {
-                alert('No record found! Please create a student account!');
+                document.querySelector('#displayMessage').style.border = "2px solid red";
+                document.querySelector('#displayMessage').style.color = "red";
+                document.querySelector('#displayMessage').style.padding = "10px";
+                document.querySelector('#displayMessage').style.marginTop = "20px";
+                document.querySelector('#displayMessage').style.marginBottom = "-10px";
+                displayMessage.textContent = 'No record found! Please create a student account!';
             }
 
             function checkAgeWithIndex() {
                 if (Number(ageLibrary[nameIndex]) === Number(ageValue)) {
                     checkLevelWithIndex();
                 } else {
-                    alert('No record found! Please create a student account!');
+                    document.querySelector('#displayMessage').style.border = "2px solid red";
+                    document.querySelector('#displayMessage').style.color = "red";
+                    document.querySelector('#displayMessage').style.padding = "10px";
+                    document.querySelector('#displayMessage').style.marginTop = "20px";
+                    document.querySelector('#displayMessage').style.marginBottom = "-10px";
+                    displayMessage.textContent = 'No record found! Please create a student account!';
                 }
             }
 
             function checkLevelWithIndex() {
                 if (Number(levelLibrary[nameIndex]) === Number(levelValue)) {
-                    alert('You are a Student. Congrats!!!');
+                    document.querySelector('#displayMessage').style.border = "2px solid lime";
+                    document.querySelector('#displayMessage').style.color = "lime";
+                    document.querySelector('#displayMessage').style.padding = "10px";
+                    document.querySelector('#displayMessage').style.marginTop = "20px";
+                    document.querySelector('#displayMessage').style.marginBottom = "-10px";
+                    displayMessage.textContent = 'You are a Student. Congrats!!!';
                 } else {
-                    alert('No record found! Please create a student account!');
+                    document.querySelector('#displayMessage').style.border = "2px solid red";
+                    document.querySelector('#displayMessage').style.color = "red";
+                    document.querySelector('#displayMessage').style.padding = "10px";
+                    document.querySelector('#displayMessage').style.marginTop = "20px";
+                    document.querySelector('#displayMessage').style.marginBottom = "-10px";
+                    displayMessage.textContent = 'No record found! Please create a student account!';
                 }
             }
     }
@@ -224,6 +247,12 @@ create.addEventListener('click', () => {
         nameLibrary.push(String(nameValue2));
         ageLibrary.push(String(ageValue2));
         levelLibrary.push(String(levelValue2));
+        document.querySelector('#displayMessage2').style.border = "2px solid lime";
+        document.querySelector('#displayMessage2').style.color = "lime";
+        document.querySelector('#displayMessage2').style.padding = "10px";
+        document.querySelector('#displayMessage2').style.marginTop = "20px";
+        document.querySelector('#displayMessage2').style.marginBottom = "-10px";
+        displayMessage2.textContent = 'Success!!! Record created and updated';
     }
 
      // Validates characters and outputs error message
