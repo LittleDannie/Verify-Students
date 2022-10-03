@@ -130,7 +130,7 @@ verify.addEventListener('click', () => {
                 document.querySelector('#displayMessage').style.marginBottom = "0";
                 displayMessage.textContent = '';
             } else if (ageRange > 90) {
-                paraAge.textContent  = 'Sorry! you are too old to be a student';
+                paraAge.textContent = 'Sorry! you are too old to be a student';
                 document.querySelector('#displayMessage').style.border = "none";
                 document.querySelector('#displayMessage').style.padding = "0";
                 document.querySelector('#displayMessage').style.marginTop = "0";
@@ -166,7 +166,7 @@ verify.addEventListener('click', () => {
     function checkForSpace() {
         const spaceCheck = nameValue[0];
 
-        if(spaceCheck === ' ') {
+        if (spaceCheck === ' ') {
             paraName.textContent = 'Username must not begin with "space"';
             document.querySelector('#displayMessage').style.border = "none";
             document.querySelector('#displayMessage').style.padding = "0";
@@ -278,7 +278,7 @@ verify.addEventListener('click', () => {
             document.querySelector('#displayMessage').style.padding = "0";
             document.querySelector('#displayMessage').style.marginTop = "0";
             document.querySelector('#displayMessage').style.marginBottom = "0";
-            displayMessage.textContent = '';displayMessage.textContent = '';
+            displayMessage.textContent = '';
         } else if (levelValue === " " || levelValue === undefined) {
             paraLevel.textContent = 'please fill in your username!';
             document.querySelector('#displayMessage').style.border = "none";
@@ -421,7 +421,7 @@ create.addEventListener('click', () => {
                 document.querySelector('#displayMessage2').style.marginBottom = "";
                 displayMessage2.textContent = '';
             } else if (ageRange2 > 90) {
-                paraAge2.textContent  = 'Sorry! you are too old to be a student';
+                paraAge2.textContent = 'Sorry! you are too old to be a student';
                 document.querySelector('#displayMessage2').style.border = "none";
                 document.querySelector('#displayMessage2').style.padding = "0";
                 document.querySelector('#displayMessage2').style.marginTop = "0";
@@ -457,7 +457,7 @@ create.addEventListener('click', () => {
     function checkForSpace2() {
         const spaceCheck = nameValue2[0];
 
-        if(spaceCheck === ' ') {
+        if (spaceCheck === ' ') {
             paraName2.textContent = 'Username must not begin with "space"';
             document.querySelector('#displayMessage2').style.border = "none";
             document.querySelector('#displayMessage2').style.padding = "0";
