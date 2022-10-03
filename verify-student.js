@@ -29,10 +29,6 @@ verify.addEventListener('click', () => {
     const ageValue = parseFloat(age.value);
     const levelValue = parseFloat(level.value);
 
-    // console.log(nameValue);
-    // console.log(ageValue);
-    // console.log(levelValue);
-
     // Verify if input matches
     if (!isNaN(nameValue)) {
         errorAlert();
@@ -480,7 +476,7 @@ create.addEventListener('click', () => {
         const matchLevel = levelLibrary[matchName];
         // const matchAgeIndex = ageLibrary.indexOf(String(matchAge));
         // const matchLevelIndex = levelLibrary.indexOf(String(matchLevel));
-        console.log(String(levelValue2));
+        
         if ((matchName >= 0) && (matchAge === String(ageValue2)) && (matchLevel === String(levelValue2))) {
             document.querySelector('#displayMessage2').style.border = "2px solid red";
             document.querySelector('#displayMessage2').style.color = "red";
