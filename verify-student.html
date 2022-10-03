@@ -71,4 +71,11 @@
     </footer>
 </body>
 <script src="verify-student.js"></script>
+<script>
+    const dateAndTime = document.querySelector('.date-time');
+    const date = new Date().toDateString();
+    const time = new Date().toLocaleTimeString();
+
+    dateAndTime.textContent = `${time} ${date}`;
+</script>
 </html>
