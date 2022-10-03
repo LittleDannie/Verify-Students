@@ -122,7 +122,7 @@ verify.addEventListener('click', () => {
         levelDigitCheck();
 
         if (rangeCheck && digitsCheck) {
-            checkRecords();
+            checkForSpace();
         }
 
         function ageRangeCheck() {
@@ -163,6 +163,22 @@ verify.addEventListener('click', () => {
             } else {
                 return digitsCheck = true;
             }
+        }
+    }
+
+    // Check for space in Username input
+    function checkForSpace() {
+        const spaceCheck = nameValue[0];
+
+        if(spaceCheck === ' ') {
+            paraName.textContent = 'Username must not begin with "space"';
+            document.querySelector('#displayMessage').style.border = "none";
+            document.querySelector('#displayMessage').style.padding = "0";
+            document.querySelector('#displayMessage').style.marginTop = "0";
+            document.querySelector('#displayMessage').style.marginBottom = "0";
+            displayMessage.textContent = '';
+        } else {
+            checkRecords();
         }
     }
 
@@ -397,7 +413,7 @@ create.addEventListener('click', () => {
         levelDigitCheck2();
 
         if (rangeCheck2 && digitsCheck2) {
-            checkForSpace();
+            checkForSpace2();
         }
 
         function ageRangeCheck2() {
@@ -442,11 +458,16 @@ create.addEventListener('click', () => {
     }
 
     // Check for space in Username input
-    function checkForSpace() {
+    function checkForSpace2() {
         const spaceCheck = nameValue2[0];
 
         if(spaceCheck === ' ') {
             paraName2.textContent = 'Username must not begin with "space"';
+            document.querySelector('#displayMessage2').style.border = "none";
+            document.querySelector('#displayMessage2').style.padding = "0";
+            document.querySelector('#displayMessage2').style.marginTop = "0";
+            document.querySelector('#displayMessage2').style.marginBottom = "";
+            displayMessage2.textContent = '';
         } else {
             storeRecord();
         }
