@@ -27,7 +27,7 @@ _Enjoy the Fun and play around_
 > ### Knowledge Tree
 > 1. HTML(Basic)
 > 2. CSS(Basic)
-> <details><summary>3. JavaScript</summary>
+<details><summary>JavaScript</summary>
 <p>
 > Since all this is more about **JavaScript** I will properly outline what I have learnt
 > - [x] Variables
