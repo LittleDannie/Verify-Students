@@ -14,6 +14,7 @@ You can use the already saved record to verify:
 - **Username:** Error-Code
 - **Age:** 18
 - **Level:** 300
+----
 
     you can also go ahead and create your own student. Any Record you create is only temporary and disappears if you reload the page.
 
@@ -26,7 +27,7 @@ _Enjoy the Fun and play around_
 > ### Knowledge Tree
 > 1. HTML(Basic)
 > 2. CSS(Basic)
-> 3. <details><summary>JavaScript</summary>
+> <details><summary>3. JavaScript</summary>
 > Since all this is more about **JavaScript** I will properly outline what I have learnt
    - [x] Variables
    - [x] Types
