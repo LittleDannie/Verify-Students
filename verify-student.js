@@ -27,13 +27,9 @@ verify.addEventListener('click', () => {
     
     const age2 = age.value;
     const level2 = level.value;
-    console.log(age2);
-    console.log(level2);
     const nameValue = name.value;
     const ageValue = parseFloat(age.value);
     const levelValue = parseFloat(level.value);
-    console.log(ageValue);
-    console.log(nameValue);
     // Verify if input matches
     if (!isNaN(nameValue)) {
         errorAlert();
