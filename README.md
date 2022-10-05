@@ -9,7 +9,9 @@ This is not a full demonstration of **JavaScript** but it is aimed at helping me
 ## Default Student
 
 You can use the already saved record to verify:
-- **Username:** ---- Error-Code ----
+- **Username:** 
+----
+Error-Code
 - **Age:** ---- 18 ----
 - **Level:** ---- 300 ----
 <br/>
