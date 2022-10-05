@@ -12,6 +12,7 @@ You can use the already saved record to verify:
 - **Username:** Error-Code
 - **Age:** 18
 - **Level:** 300
+----
     you can also go ahead and create your own student. Any Record you create is only temporary and disappears if you reload the page.
 _Enjoy the Fun and play around_
 
