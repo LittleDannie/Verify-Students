@@ -17,6 +17,7 @@ You can use the already saved record to verify:
 - **Level:** 300
 ----
 
+
     you can also go ahead and create your own student. Any Record you create is only temporary and disappears if you reload the page.
 
 _Enjoy the Fun and play around_
@@ -33,10 +34,10 @@ _Enjoy the Fun and play around_
 >     - [x] Variables
 >     - [x] Types
 >     - [x] Strings and Numbers
->    - [x] Conditional Statements
-> - [x] Logical Operators
-> - [x] Ternary Operators
-> - [ ] Functions and Return(first two lessons which is on MDN
+>     - [x] Conditional Statements
+>     - [x] Logical Operators
+>     - [x] Ternary Operators
+>     - [ ] Functions and Return(first two lessons which is on MDN
 
 The extra thing included in the code doesn't mean I learnt them. I just had an idea seeing them from examples throughout my lessons and I also had a peep at arrays so I would be able to temporarily save inputs
 
