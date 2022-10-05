@@ -27,15 +27,15 @@ _Enjoy the Fun and play around_
 > ### Knowledge Tree
 > 1. HTML(Basic)
 > 2. CSS(Basic)
-<details><summary>> 3. JavaScript</summary>
-> Since all this is more about **JavaScript** I will properly outline what I have learnt
-> - [x] Variables
-> - [x] Types
-> - [x] Strings and Numbers
-> - [x] Conditional Statements
-> - [x] Logical Operators
-> - [x] Ternary Operators
-> - [ ] Functions and Return(first two lessons which is on MDN)
+> <details><summary>3. JavaScript</summary>
+ Since all this is more about **JavaScript** I will properly outline what I have learnt
+ - [x] Variables
+ - [x] Types
+ - [x] Strings and Numbers
+ - [x] Conditional Statements
+ - [x] Logical Operators
+ - [x] Ternary Operators
+ - [ ] Functions and Return(first two lessons which is on MDN)
 </details>
 
 The extra thing included in the code doesn't mean I learnt them. I just had an idea seeing them from examples throughout my lessons and I also had a peep at arrays so I would be able to temporarily save inputs
