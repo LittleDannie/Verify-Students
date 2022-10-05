@@ -9,16 +9,15 @@ This is not a full demonstration of **JavaScript** but it is aimed at helping me
 ## Default Student
 
 You can use the already saved record to verify:
-- **Username:** Error-Code
-- **Age:** 18
-- **Level:** 300
-----
+- **Username:** ----Error-Code
+- **Age:** ----18
+- **Level:** ----300
+<br/>
     you can also go ahead and create your own student. Any Record you create is only temporary and disappears if you reload the page.
 _Enjoy the Fun and play around_
 
 > ## Note:
-> It might not be the best demonstration of a already working system out there but have it in mind that all code written on this repo is just my knowledge of **JavaScript** at this point. If you are eager to know how much I have learnt before I wrote this code then you can take a look at my current progress [Fundamentals Part 3](https://www.theodinproject.com/lessons/foundations-fundamentals-part-3)
-
+> It might not be the best demonstration of a already working system out there but have it in mind that all code written on this repo is just my knowledge of **JavaScript** at this point. If you are eager to know how much I have learnt before I wrote this code then you can take a look at my current progress [Fundamentals Part 3](https://www.theodinproject.com/lessons/foundations-fundamentals-part-3).
 > *To outline it better this is my current knowledge at this moment:*
 > ### Knowledge Tree
 > - HTML(Basic)
