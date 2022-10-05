@@ -278,7 +278,7 @@ verify.addEventListener('click', () => {
         }
         
         if (level2 === "" || level2 === undefined || level2 === null) {
-            paraLevel.textContent = 'please fill in your username!';
+            paraLevel.textContent = 'please fill in your level!';
             document.querySelector('#displayMessage').style.border = "none";
             document.querySelector('#displayMessage').style.padding = "0";
             document.querySelector('#displayMessage').style.marginTop = "0";
@@ -560,7 +560,7 @@ create.addEventListener('click', () => {
         }
         
         if (level22 === "" || levelValue2 === undefined || level22 === null) {
-            paraLevel2.textContent = 'please fill in your username!';
+            paraLevel2.textContent = 'please fill in your level!';
             document.querySelector('#displayMessage2').style.border = "none";
             document.querySelector('#displayMessage2').style.padding = "0";
             document.querySelector('#displayMessage2').style.marginTop = "0";
