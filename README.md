@@ -30,13 +30,13 @@ _Enjoy the Fun and play around_
 > <details><summary>3. JavaScript</summary>
 <p>
 > Since all this is more about **JavaScript** I will properly outline what I have learnt
->   - [x] Variables
->   - [x] Types
->   - [x] Strings and Numbers
->   - [x] Conditional Statements
->   - [x] Logical Operators
->   - [x] Ternary Operators
->   - [ ] Functions and Return(first two lessons which is on MDN)
+> - [x] Variables
+> - [x] Types
+> - [x] Strings and Numbers
+> - [x] Conditional Statements
+> - [x] Logical Operators
+> - [x] Ternary Operators
+> - [ ] Functions and Return(first two lessons which is on MDN)
 </p>
 </details>
 
