@@ -25,10 +25,15 @@ verify.addEventListener('click', () => {
     const age = document.querySelector('#age');
     const level = document.querySelector('#level');
     
+    const age2 = age.value;
+    const level2 = level.value;
+    console.log(age2);
+    console.log(level2);
     const nameValue = name.value;
     const ageValue = parseFloat(age.value);
     const levelValue = parseFloat(level.value);
-
+    console.log(ageValue);
+    console.log(nameValue);
     // Verify if input matches
     if (!isNaN(nameValue)) {
         errorAlert();
@@ -248,16 +253,16 @@ verify.addEventListener('click', () => {
             document.querySelector('#displayMessage').style.marginBottom = "0";
             displayMessage.textContent = '';
         }
-
-        if (isNaN(ageValue)) {
-            paraAge.textContent = 'age should contain numbers only!';
+        
+        if (age2 === null || age2 === undefined || age2 === "") {
+            paraAge.textContent = 'please fill in your age!';
             document.querySelector('#displayMessage').style.border = "none";
             document.querySelector('#displayMessage').style.padding = "0";
             document.querySelector('#displayMessage').style.marginTop = "0";
             document.querySelector('#displayMessage').style.marginBottom = "0";
             displayMessage.textContent = '';
-        } else if (ageValue === null || ageValue === undefined) {
-            paraAge.textContent = 'please fill in your age!';
+        } else if (isNaN(ageValue)) {
+            paraAge.textContent = 'age should contain numbers only!';
             document.querySelector('#displayMessage').style.border = "none";
             document.querySelector('#displayMessage').style.padding = "0";
             document.querySelector('#displayMessage').style.marginTop = "0";
@@ -271,16 +276,16 @@ verify.addEventListener('click', () => {
             document.querySelector('#displayMessage').style.marginBottom = "0";
             displayMessage.textContent = '';
         }
-
-        if (isNaN(levelValue)) {
-            paraLevel.textContent = 'level should contain numbers only!';
+        
+        if (level2 === "" || level2 === undefined || level2 === null) {
+            paraLevel.textContent = 'please fill in your username!';
             document.querySelector('#displayMessage').style.border = "none";
             document.querySelector('#displayMessage').style.padding = "0";
             document.querySelector('#displayMessage').style.marginTop = "0";
             document.querySelector('#displayMessage').style.marginBottom = "0";
             displayMessage.textContent = '';
-        } else if (levelValue === " " || levelValue === undefined) {
-            paraLevel.textContent = 'please fill in your username!';
+        } else if (isNaN(levelValue)) {
+            paraLevel.textContent = 'level should contain numbers only!';
             document.querySelector('#displayMessage').style.border = "none";
             document.querySelector('#displayMessage').style.padding = "0";
             document.querySelector('#displayMessage').style.marginTop = "0";
@@ -316,6 +321,8 @@ create.addEventListener('click', () => {
     const age2 = document.querySelector('#age2');
     const level2 = document.querySelector('#level2');
     
+    const age22 = age2.value;
+    const level22 = level2.value;
     const nameValue2 = name2.value;
     const ageValue2 = parseFloat(age2.value);
     const levelValue2 = parseFloat(level2.value);
@@ -528,16 +535,16 @@ create.addEventListener('click', () => {
             document.querySelector('#displayMessage2').style.marginBottom = "0";
             displayMessage2.textContent = '';
         }
-
-        if (isNaN(ageValue2)) {
-            paraAge2.textContent = 'age should contain numbers only!';
+        
+        if (age22 === null || age22 === undefined || age22 === "") {
+            paraAge2.textContent = 'please fill in your age!';
             document.querySelector('#displayMessage2').style.border = "none";
             document.querySelector('#displayMessage2').style.padding = "0";
             document.querySelector('#displayMessage2').style.marginTop = "0";
             document.querySelector('#displayMessage2').style.marginBottom = "0";
             displayMessage2.textContent = '';
-        } else if (ageValue2 === null || ageValue2 === undefined) {
-            paraAge2.textContent = 'please fill in your age!';
+        } else if (isNaN(ageValue2)) {
+            paraAge2.textContent = 'age should contain numbers only!';
             document.querySelector('#displayMessage2').style.border = "none";
             document.querySelector('#displayMessage2').style.padding = "0";
             document.querySelector('#displayMessage2').style.marginTop = "0";
@@ -551,16 +558,16 @@ create.addEventListener('click', () => {
             document.querySelector('#displayMessage2').style.marginBottom = "0";
             displayMessage2.textContent = '';
         }
-
-        if (isNaN(levelValue2)) {
-            paraLevel2.textContent = 'level should contain numbers only!';
+        
+        if (level22 === "" || levelValue2 === undefined || level22 === null) {
+            paraLevel2.textContent = 'please fill in your username!';
             document.querySelector('#displayMessage2').style.border = "none";
             document.querySelector('#displayMessage2').style.padding = "0";
             document.querySelector('#displayMessage2').style.marginTop = "0";
             document.querySelector('#displayMessage2').style.marginBottom = "0";
             displayMessage2.textContent = '';
-        } else if (levelValue2 === " " || levelValue2 === undefined) {
-            paraLevel2.textContent = 'please fill in your username!';
+        } else if (isNaN(levelValue2)) {
+            paraLevel2.textContent = 'level should contain numbers only!';
             document.querySelector('#displayMessage2').style.border = "none";
             document.querySelector('#displayMessage2').style.padding = "0";
             document.querySelector('#displayMessage2').style.marginTop = "0";
