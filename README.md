@@ -18,7 +18,7 @@ You can use the already saved record to verify:
 ----
 
 
-    you can also go ahead and create your own student. Any Record you create is only temporary and disappears if you reload the page.
+you can also go ahead and create your own student. Any Record you create is only temporary and disappears if you reload the page.
 
 _Enjoy the Fun and play around_
 
